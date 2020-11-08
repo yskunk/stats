@@ -1,0 +1,677 @@
+.
+├── YIPS
+│   ├── YIPS
+│   │   └── assets
+│   ├── _data
+│   ├── _includes
+│   ├── _layouts
+│   └── assets
+├── api.yuni.finance
+│   ├── helpers
+│   ├── models
+│   └── routes
+├── apr-oracle
+│   ├── build
+│   │   └── contracts
+│   ├── contracts
+│   │   ├── APROracle.sol
+│   │   ├── APRWithPoolOracle.sol
+│   │   ├── IAPROracle.sol
+│   │   ├── IAPRWithPoolOracle.sol
+│   │   └── Migrations.sol
+│   └── migrations
+├── audit
+│   └── contracts
+│       ├── YFI
+│       │   └── YFI.sol
+│       ├── adhoc
+│       │   ├── COMPfarming.sol
+│       │   ├── CurveFlash.sol
+│       │   └── DistributeYFI.sol
+│       ├── wip
+│       │   ├── AaveCollateralVaultProxy.sol
+│       │   ├── AaveLiquidations.sol
+│       │   ├── CompensationEscrow.sol
+│       │   ├── ConverterDAItoYCRV.sol
+│       │   ├── CreamFlashLiquidations.sol
+│       │   ├── CurveVaultTest.sol
+│       │   ├── DistributionRewardsProxy.sol
+│       │   ├── EminenceCurrency.sol
+│       │   ├── EminenceStats.sol
+│       │   ├── GovernanceAlpha.sol
+│       │   ├── HegicV1Pair.sol
+│       │   ├── Keep3rV1Helper.sol
+│       │   ├── RiskOracle.sol
+│       │   ├── StrategyBalancerMTA.sol
+│       │   ├── StrategyCompoundBasic.sol
+│       │   ├── StrategyCurveYFII.sol
+│       │   ├── StrategyMStableSavingsTUSD.sol
+│       │   ├── StrategyMStableSavingsUSDC.sol
+│       │   ├── StrategySNXSUSD.sol
+│       │   ├── StrategyV1Proxy.sol
+│       │   ├── StrategyVaultTUSD.sol
+│       │   ├── StrategyYFII.sol
+│       │   ├── StrategyYearnBasic.sol
+│       │   ├── SyntheticRebase.sol
+│       │   ├── SyntheticRebaseTest.sol
+│       │   ├── UniswapV2Factory.sol
+│       │   ├── UniswapV2Oracle.sol
+│       │   ├── UniswapV2Router.sol
+│       │   ├── YearnV1Factory.sol
+│       │   ├── exploit-earn.sol
+│       │   ├── exploitClean.sol
+│       │   ├── veCurveVault.sol
+│       │   ├── yCollateralVaultProxy.sol
+│       │   ├── yVault.sol
+│       │   ├── yWrappedVault.sol
+│       │   └── ycUSDT.sol
+│       ├── yBorrow
+│       │   └── yCollateralVaultProxy.sol
+│       ├── yEarn
+│       │   ├── APROracle.sol
+│       │   ├── APRWithPoolOracle.sol
+│       │   ├── CurveFlash.sol
+│       │   ├── CurvePool.sol
+│       │   ├── SmartContractWhitelist.sol
+│       │   ├── UniSwap_ETH_CDAIZap.sol
+│       │   ├── UniswapAPR.sol
+│       │   ├── busdCurveFlashDAI.sol
+│       │   ├── busdCurveGrantPool.sol
+│       │   ├── yBTC.sol
+│       │   ├── yBUSDv3.sol
+│       │   ├── yCRV.sol
+│       │   ├── yCurveBalances.sol
+│       │   ├── yCurveExchange.sol
+│       │   ├── yCurveExchangeView.sol
+│       │   ├── yCurveGrantPool.sol
+│       │   ├── yCurveZapIn.sol
+│       │   ├── yCurveZapInV4.sol
+│       │   ├── yCurveZapOut.sol
+│       │   ├── yCurveZapOutV4.sol
+│       │   ├── yCurveZapSwap.sol
+│       │   ├── yCurveZapSwapV4toV3.sol
+│       │   ├── yDAI.sol
+│       │   ├── yDAIv2Proxy.sol
+│       │   ├── yDAIv3.sol
+│       │   ├── yETH.sol
+│       │   ├── yEarnAPR.sol
+│       │   ├── yEarnAPRWithPool.sol
+│       │   ├── yEarnManager.sol
+│       │   ├── yEarnProvider.sol
+│       │   ├── ySUSD.sol
+│       │   ├── yTUSD.sol
+│       │   ├── yTokenProxy.sol
+│       │   ├── yTokenRebalance.sol
+│       │   ├── yUSDC.sol
+│       │   ├── yUSDCv3.sol
+│       │   ├── yUSDT.sol
+│       │   ├── yUSDTv1.sol
+│       │   ├── yUSDTv3.sol
+│       │   ├── yWBTC.sol
+│       │   ├── ycUSDC.sol
+│       │   └── ycUSDT.sol
+│       ├── yGov
+│       │   ├── TimelockGovernance.sol
+│       │   ├── YearnFeeRewards.sol
+│       │   ├── YearnGovernanceBPT.sol
+│       │   ├── YearnGovernanceYFI.sol
+│       │   ├── YearnRewardsBalancer.sol
+│       │   ├── YearnRewardsBurn.sol
+│       │   └── YearnRewardsCRV.sol
+│       ├── yLeverage
+│       │   └── DSSLeverage.sol
+│       ├── yLiquidate
+│       │   ├── AaveLiquidate.sol
+│       │   ├── LiquidationOracle.sol
+│       │   └── oCurveLiquidate.sol
+│       ├── ySwap
+│       │   ├── ChainLinkFeedsRegistry.sol
+│       │   ├── StableAMMv3.sol
+│       │   ├── UniswapYieldV2Factory.sol
+│       │   └── UniswapYieldV2Router02.sol
+│       ├── ySynth
+│       │   ├── SupplyFactoryEUR.sol
+│       │   └── Synthetic.sol
+│       ├── yTrade
+│       │   ├── yCollateral.sol
+│       │   └── yTrade.sol
+│       └── yYield
+│           ├── StrategyCompoundBasic.sol
+│           ├── StrategyYearnBasic.sol
+│           └── yVault.sol
+├── balancer-gov
+│   ├── public
+│   ├── server
+│   └── src
+│       ├── assets
+│       │   ├── connectors
+│       │   └── fonts
+│       ├── components
+│       │   ├── Block
+│       │   ├── Modal
+│       │   └── Ui
+│       ├── helpers
+│       │   └── abi
+│       ├── store
+│       │   └── modules
+│       └── views
+├── docs
+│   ├── additional-resources
+│   ├── archived
+│   │   ├── yearn.finance
+│   │   └── ytrade.finance
+│   ├── developers
+│   │   ├── misc-resources
+│   │   │   ├── smart-contract-api
+│   │   │   └── smart-contract-integration
+│   │   └── yvaults-documentation
+│   ├── how-to-guides
+│   ├── products
+│   └── r-and-d
+├── faq
+├── iborrow-finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       │   └── fonts
+│       ├── components
+│       │   ├── account
+│       │   ├── borrower
+│       │   ├── borrowing
+│       │   ├── collateral
+│       │   ├── header
+│       │   ├── home
+│       │   ├── loader
+│       │   ├── snackbar
+│       │   ├── unlock
+│       │   └── vaults
+│       ├── constants
+│       ├── store
+│       │   └── config
+│       └── theme
+├── iearn-finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       │   └── fonts
+│       ├── components
+│       │   ├── apr
+│       │   ├── builtwith
+│       │   ├── dashboard
+│       │   ├── footer
+│       │   ├── header
+│       │   ├── home
+│       │   ├── idai
+│       │   ├── insure
+│       │   ├── invest
+│       │   ├── investSimple
+│       │   ├── loader
+│       │   ├── manage
+│       │   ├── performance
+│       │   ├── snackbar
+│       │   ├── unlock
+│       │   ├── vault
+│       │   └── zap
+│       ├── config
+│       ├── constants
+│       ├── locales
+│       │   ├── en
+│       │   ├── ja
+│       │   ├── pt
+│       │   └── zh
+│       ├── stores
+│       └── theme
+├── ileverage-finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       ├── components
+│       │   ├── close
+│       │   ├── footer
+│       │   ├── home
+│       │   ├── loader
+│       │   ├── open
+│       │   ├── snackbar
+│       │   └── unlock
+│       ├── config
+│       ├── constants
+│       ├── locales
+│       │   ├── en
+│       │   ├── ja
+│       │   └── zh
+│       ├── stores
+│       └── theme
+├── iliquidate-finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       ├── components
+│       │   ├── collateral
+│       │   │   ├── deposit
+│       │   │   └── withdraw
+│       │   ├── footer
+│       │   ├── home
+│       │   ├── liquidate
+│       │   ├── liquidationCandidates
+│       │   ├── loader
+│       │   ├── snackbar
+│       │   ├── trade
+│       │   └── unlock
+│       ├── config
+│       ├── constants
+│       ├── locales
+│       │   ├── en
+│       │   ├── ja
+│       │   └── zh
+│       ├── stores
+│       └── theme
+├── itoken
+│   ├── build
+│   │   └── contracts
+│   ├── contracts
+│   │   ├── AaveLiquidate.sol
+│   │   ├── CurveFlash.sol
+│   │   ├── CurveFlashDAI.sol
+│   │   ├── CurveRebalance.sol
+│   │   ├── IEther.sol
+│   │   ├── IIEther.sol
+│   │   ├── IYCRV.sol
+│   │   ├── IYDAI.sol
+│   │   ├── LiquidationOracle.sol
+│   │   ├── Migrations.sol
+│   │   ├── YBUSDv3.sol
+│   │   ├── YCRV.sol
+│   │   ├── YDAI.sol
+│   │   ├── YDAIv2.sol
+│   │   ├── YDAIv2Proxy.sol
+│   │   ├── YDAIv3.sol
+│   │   ├── YDAIv4.sol
+│   │   ├── YSUSD.sol
+│   │   ├── YSUSDv2.sol
+│   │   ├── YTUSDv2.sol
+│   │   ├── YUSDC.sol
+│   │   ├── YUSDCv2.sol
+│   │   ├── YUSDCv3.sol
+│   │   ├── YUSDT.sol
+│   │   ├── YUSDTv2.sol
+│   │   ├── YUSDTv3.sol
+│   │   ├── YWBTC.sol
+│   │   ├── YWBTCv2.sol
+│   │   ├── busdCurveFlashDAI.sol
+│   │   ├── busdCurveGrantPool.sol
+│   │   ├── iDAIZapSwap.sol
+│   │   ├── oCurveFlashLiquidate.sol
+│   │   ├── oCurveLiquidate.sol
+│   │   ├── yCurveBalances.sol
+│   │   ├── yCurveExchange.sol
+│   │   ├── yCurveGrantPool.sol
+│   │   ├── yCurveRebalance.sol
+│   │   ├── yCurveZapIn.sol
+│   │   ├── yCurveZapInV4.sol
+│   │   ├── yCurveZapOut.sol
+│   │   ├── yCurveZapOutV4.sol
+│   │   ├── yCurveZapSwap.sol
+│   │   ├── yCurveZapSwapV4.sol
+│   │   └── yCurveZapSwapV4toV3.sol
+│   ├── docs
+│   ├── migrations
+│   └── test
+├── uniswap-roi
+│   ├── build
+│   │   └── contracts
+│   ├── contracts
+│   │   ├── ICurveFi.sol
+│   │   ├── IEarnAPR.sol
+│   │   ├── IEarnAPRWithPool.sol
+│   │   ├── IEarnManager.sol
+│   │   ├── IEarnManagerWithPool.sol
+│   │   ├── IEarnProvider.sol
+│   │   ├── IIEarnAPR.sol
+│   │   ├── IIEarnManager.sol
+│   │   ├── IUniswapAPR.sol
+│   │   ├── IUniswapROI.sol
+│   │   ├── Migrations.sol
+│   │   ├── UniswapAPR.sol
+│   │   └── UniswapROI.sol
+│   ├── migrations
+│   └── test
+├── vaults
+│   ├── contracts
+│   │   ├── IController.sol
+│   │   ├── IStrategy.sol
+│   │   ├── IVault.sol
+│   │   ├── controllers
+│   │   │   ├── StrategyControllerV1.sol
+│   │   │   └── StrategyControllerV2.sol
+│   │   ├── strategies
+│   │   │   ├── StrategyCurveYCRV.sol
+│   │   │   ├── StrategyCurveYCRVVoter.sol
+│   │   │   ├── StrategyDForceDAI.sol
+│   │   │   ├── StrategyDForceUSDC.sol
+│   │   │   ├── StrategyDForceUSDT.sol
+│   │   │   ├── StrategyMStableSavingsTUSD.sol
+│   │   │   ├── StrategyMStableSavingsUSDC.sol
+│   │   │   ├── StrategyVaultTUSD.sol
+│   │   │   ├── StrategyVaultUSDC.sol
+│   │   │   └── StrategyYFII.sol
+│   │   ├── test
+│   │   │   └── Token.sol
+│   │   └── vaults
+│   │       ├── yDelegatedVault.sol
+│   │       └── yVault.sol
+│   ├── interfaces
+│   │   ├── Aave.sol
+│   │   ├── Balancer.sol
+│   │   ├── Converter.sol
+│   │   ├── Curve.sol
+│   │   ├── DForce.sol
+│   │   ├── Gauge.sol
+│   │   ├── MStable.sol
+│   │   ├── OneSplitAudit.sol
+│   │   ├── Uniswap.sol
+│   │   └── Yfii.sol
+│   └── tests
+│       └── configuration
+├── ychad-audit
+│   ├── interfaces
+│   ├── reports
+│   │   ├── financial
+│   │   └── gas
+│   └── scripts
+├── ycredit-finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       │   ├── connectors
+│       │   ├── fonts
+│       │   ├── socials
+│       │   └── tokens
+│       ├── components
+│       │   ├── account
+│       │   ├── collateral
+│       │   ├── disclaimer
+│       │   ├── footer
+│       │   ├── header
+│       │   ├── home
+│       │   ├── lending
+│       │   ├── liquidity
+│       │   ├── loader
+│       │   ├── snackbar
+│       │   └── unlock
+│       ├── config
+│       ├── constants
+│       ├── stores
+│       └── theme
+├── yearn-audits
+├── yearn-exporter
+│   ├── interfaces
+│   │   ├── controllers
+│   │   ├── curve
+│   │   ├── strategies
+│   │   ├── uniswap
+│   │   ├── vaults
+│   │   └── yearn
+│   ├── scripts
+│   └── yearn
+├── yearn-protocol
+│   ├── contracts
+│   │   ├── controllers
+│   │   │   ├── Controller.sol
+│   │   │   └── DelegatedController.sol
+│   │   ├── exploits
+│   │   │   └── EvilGauge.sol
+│   │   ├── registries
+│   │   │   └── YRegistry.sol
+│   │   ├── strategies
+│   │   │   ├── CurveYCRVVoter.sol
+│   │   │   ├── StrategyCreamYFI.sol
+│   │   │   ├── StrategyCurve3CrvVoterProxy.sol
+│   │   │   ├── StrategyCurveBTCVoterProxy.sol
+│   │   │   ├── StrategyCurveBUSDVoterProxy.sol
+│   │   │   ├── StrategyCurveYVoterProxy.sol
+│   │   │   ├── StrategyDAICurve.sol
+│   │   │   ├── StrategyDForceUSDC.sol
+│   │   │   ├── StrategyDForceUSDT.sol
+│   │   │   ├── StrategyMKRVaultDAIDelegate.sol
+│   │   │   ├── StrategyProxy.sol
+│   │   │   ├── StrategyTUSDCurve.sol
+│   │   │   ├── StrategyVaultUSDC.sol
+│   │   │   └── StrategyYFIGovernance.sol
+│   │   ├── test
+│   │   │   └── Token.sol
+│   │   ├── utils
+│   │   │   ├── BTCOSMedianizer.sol
+│   │   │   └── ETHOSMedianizer.sol
+│   │   └── vaults
+│   │       ├── yDelegatedVault.sol
+│   │       ├── yVault.sol
+│   │       └── yWETH.sol
+│   ├── interfaces
+│   │   ├── aave
+│   │   │   ├── Aave.sol
+│   │   │   ├── AaveToken.sol
+│   │   │   ├── LendingPoolAddressesProvider.sol
+│   │   │   └── Oracle.sol
+│   │   ├── compound
+│   │   │   └── Token.sol
+│   │   ├── cream
+│   │   │   └── Controller.sol
+│   │   ├── curve
+│   │   │   ├── Curve.sol
+│   │   │   ├── Gauge.sol
+│   │   │   ├── Mintr.sol
+│   │   │   └── VoteEscrow.sol
+│   │   ├── dforce
+│   │   │   ├── Rewards.sol
+│   │   │   └── Token.sol
+│   │   ├── maker
+│   │   │   ├── Maker.sol
+│   │   │   └── OracleSecurityModule.sol
+│   │   ├── uniswap
+│   │   │   └── Uni.sol
+│   │   ├── weth
+│   │   │   └── WETH.sol
+│   │   └── yearn
+│   │       ├── IController.sol
+│   │       ├── IConverter.sol
+│   │       ├── IDelegatedVault.sol
+│   │       ├── IGovernance.sol
+│   │       ├── IOneSplitAudit.sol
+│   │       ├── IProxy.sol
+│   │       ├── IStrategy.sol
+│   │       ├── IToken.sol
+│   │       ├── IVault.sol
+│   │       ├── IVoterProxy.sol
+│   │       └── IWrappedVault.sol
+│   └── tests
+│       └── functional
+│           ├── controllers
+│           ├── strategies
+│           ├── utils
+│           └── vaults
+├── yearn-recycle
+│   ├── contracts
+│   ├── interfaces
+│   ├── scripts
+│   └── tests
+├── yearn-security
+│   ├── disclosures
+│   └── keys
+├── yearn-starter-pack
+│   ├── contracts
+│   │   ├── controllers
+│   │   │   └── Controller.sol
+│   │   ├── strategies
+│   │   │   ├── StrategyDAICompoundBasic.sol
+│   │   │   └── StrategyDAICurve.sol
+│   │   ├── test
+│   │   │   └── Token.sol
+│   │   └── vaults
+│   │       └── yVault.sol
+│   ├── interfaces
+│   │   ├── aave
+│   │   │   ├── Aave.sol
+│   │   │   ├── AaveToken.sol
+│   │   │   ├── LendingPoolAddressesProvider.sol
+│   │   │   └── Oracle.sol
+│   │   ├── compound
+│   │   │   ├── Comptroller.sol
+│   │   │   └── cToken.sol
+│   │   ├── cream
+│   │   │   └── Controller.sol
+│   │   ├── curve
+│   │   │   ├── Curve.sol
+│   │   │   └── Gauge.sol
+│   │   ├── dforce
+│   │   │   ├── Rewards.sol
+│   │   │   └── Token.sol
+│   │   ├── maker
+│   │   │   ├── Maker.sol
+│   │   │   └── OracleSecurityModule.sol
+│   │   ├── uniswap
+│   │   │   └── Uni.sol
+│   │   ├── weth
+│   │   │   └── WETH.sol
+│   │   └── yearn
+│   │       ├── Converter.sol
+│   │       ├── IController.sol
+│   │       ├── Mintr.sol
+│   │       ├── OneSplitAudit.sol
+│   │       ├── Strategy.sol
+│   │       ├── Token.sol
+│   │       └── Vault.sol
+│   └── tests
+│       └── configuration
+├── yearn-subgraph
+│   ├── abis
+│   └── src
+│       ├── mappings
+│       └── utils
+│           └── helpers
+│               └── yVault
+├── yearn-vaults
+│   ├── contracts
+│   │   ├── BaseStrategy.sol
+│   │   └── test
+│   │       ├── TestStrategy.sol
+│   │       └── Token.sol
+│   ├── scripts
+│   └── tests
+│       ├── functional
+│       │   ├── strategy
+│       │   └── vault
+│       └── integration
+├── ygov-finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       │   └── fonts
+│       ├── components
+│       │   ├── account
+│       │   ├── claim
+│       │   ├── footer
+│       │   ├── header
+│       │   ├── home
+│       │   ├── loader
+│       │   ├── lock
+│       │   ├── propose
+│       │   ├── rewardPools
+│       │   ├── snackbar
+│       │   ├── stake
+│       │   ├── unlock
+│       │   ├── versionToggle
+│       │   └── vote
+│       ├── config
+│       ├── constants
+│       ├── locales
+│       │   ├── en
+│       │   ├── ja
+│       │   └── zh
+│       ├── stores
+│       ├── theme
+│       └── utils
+├── yinsure-finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       │   └── fonts
+│       ├── components
+│       │   ├── account
+│       │   ├── addCover
+│       │   ├── dashboard
+│       │   ├── disclaimer
+│       │   ├── footer
+│       │   ├── header
+│       │   ├── home
+│       │   ├── loader
+│       │   ├── snackbar
+│       │   └── unlock
+│       ├── config
+│       ├── constants
+│       ├── locales
+│       │   ├── en
+│       │   ├── ja
+│       │   └── zh
+│       ├── stores
+│       └── theme
+├── yip_validator
+│   ├── bin
+│   ├── lib
+│   │   └── yip_validator
+│   └── spec
+│       └── fixtures
+│           ├── invalid
+│           └── valid
+├── yswap-finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       │   └── fonts
+│       ├── components
+│       │   ├── account
+│       │   ├── footer
+│       │   ├── header
+│       │   ├── home
+│       │   ├── loader
+│       │   ├── pool
+│       │   │   ├── deposit
+│       │   │   ├── exchange
+│       │   │   └── withdraw
+│       │   ├── snackbar
+│       │   └── unlock
+│       ├── config
+│       ├── constants
+│       ├── locales
+│       │   ├── en
+│       │   ├── ja
+│       │   └── zh
+│       ├── stores
+│       └── theme
+├── yuni.finance
+│   ├── public
+│   └── src
+│       ├── assets
+│       │   ├── connectors
+│       │   ├── delegatees
+│       │   └── fonts
+│       ├── components
+│       │   ├── delegate
+│       │   ├── loader
+│       │   ├── snackbar
+│       │   └── unlock
+│       ├── config
+│       ├── constants
+│       ├── stores
+│       └── theme
+└── zap
+    ├── build
+    │   └── contracts
+    ├── contracts
+    │   ├── IUniSwap_ETH_cDAI.sol
+    │   ├── InvestZAP.sol
+    │   ├── Migrations.sol
+    │   └── UniSwap_ETH_cDAI.sol
+    ├── migrations
+    └── test
+
+394 directories, 280 files
